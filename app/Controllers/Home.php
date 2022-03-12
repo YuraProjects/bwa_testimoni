@@ -6,11 +6,9 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
-    }
-
-    public function home()
-    {
-        echo "Selamat Datang Users!";
+        $data = [
+            'title' => 'Dashboard',
+        ];
+        return view('welcome_message', $data);
     }
 }
