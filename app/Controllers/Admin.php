@@ -4,10 +4,18 @@ namespace App\Controllers;
 
 class Admin extends BaseController
 {
-    public function index()
+    public function home()
     {
         $data = [
-            'title' => 'Testimonial',
+            'title' => 'Home',
+            'content' => 'admin/home/index'
+        ];
+        return view('layout/v_wrapper', $data);
+    }
+    public function testimonial()
+    {
+        $data = [
+            'title' => 'Testimoni',
             'content' => 'admin/testimonial/index'
         ];
         return view('layout/v_wrapper', $data);
