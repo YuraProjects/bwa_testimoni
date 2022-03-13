@@ -34,6 +34,9 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/admin/home', 'Admin::home');
 $routes->get('/admin/testimonial', 'Admin::testimonial');
+$routes->get('/admin/testimonial/tambah', 'Admin::add');
+$routes->post('/admin/testimonial/simpan', 'Admin::save');
+$routes->get('/admin/testimonial/delete/(:num)', 'Admin::delete/$1');
 // $routes->group('', ['filter' => 'login'], function ($routes) {
 //     $routes->get('/home', 'Home::home');
 // });
